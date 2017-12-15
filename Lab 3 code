@@ -1,6 +1,5 @@
 
 ids = []
-
 scores = []
 
 
@@ -18,6 +17,7 @@ def userIdList():
   scoreAvg = sum(scores) / len(scores)
   print("The score average is ",scoreAvg) 
 
+ # APPLY LETTER GRADE
  for i,x in zip(scores, ids):
   if len(scores) == 5:
    if i > scoreAvg + 10:
@@ -30,6 +30,7 @@ def userIdList():
     print(x, i, "Score is an D")
    else:
     print(x, i, "Score is an F")   
+#################
 
 userIdList()
 
