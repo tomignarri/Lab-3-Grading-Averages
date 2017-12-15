@@ -1,0 +1,35 @@
+
+ids = []
+
+scores = []
+
+
+def userIdList():
+ while len(scores) < 5: 
+  idNumber = int(input("Enter a user ID "))
+  score = int(input("Enter a score "))
+  ids.append(idNumber)
+  if score >= 0.0 and score<= 100.0:
+   scores.append(score)
+  else:
+   print("Score must be greater than zero and less than 100.")
+
+ if len(scores) == 5:
+  scoreAvg = sum(scores) / len(scores)
+  print("The score average is ",scoreAvg) 
+
+ for i,x in zip(scores, ids):
+  if len(scores) == 5:
+   if i > scoreAvg + 10:
+    print(x, i, "Score is an A.")
+   elif i > scoreAvg + 5:
+    print(x, i, "Score is an B")
+   elif i > scoreAvg - 5:
+    print(x, i, "Score is an C")         
+   elif i > scoreAvg - 10:
+    print(x, i, "Score is an D")
+   else:
+    print(x, i, "Score is an F")   
+
+userIdList()
+
