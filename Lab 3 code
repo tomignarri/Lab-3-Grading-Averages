@@ -3,8 +3,12 @@ ids = []
 
 scores = []
 
+# input student ids and scores
+# output average score and letter grades
 
 def userIdList():
+
+ # in this loop...prompts to enter input
  while len(scores) < 5: 
   idNumber = int(input("Enter a user ID "))
   score = int(input("Enter a score "))
@@ -14,11 +18,13 @@ def userIdList():
   else:
    print("Score must be greater than zero and less than 100.")
 
- if len(scores) == 5:
+ # process score average
+ if len(scores) == 5: 
   scoreAvg = sum(scores) / len(scores)
   print("The score average is ",scoreAvg) 
 
- for i,x in zip(scores, ids):
+ # process each letter grade
+ for i,x in zip(scores, ids): 
   if len(scores) == 5:
    if i > scoreAvg + 10:
     print(x, i, "Score is an A.")
@@ -32,4 +38,5 @@ def userIdList():
     print(x, i, "Score is an F")   
 
 userIdList()
+
 
